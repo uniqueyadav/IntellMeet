@@ -1,0 +1,357 @@
+/* ==========================
+      PREMIUM AUTH UI
+========================== */
+
+:root {
+    --bg-main: #F4F7FF;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --text-tertiary: #94A3B8;
+    --accent-primary: #6D5DF6;
+    --accent-secondary: #4F8CFF;
+    --accent-cyan: #00C2FF;
+    --danger: #DC2626;
+    --danger-bg: #FEF2F2;
+    --danger-border: #FECACA;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-xl: 30px;
+}
+
+
+/* ==========================
+      PAGE
+========================== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle at top left, #7C3AED22, transparent 40%), radial-gradient(circle at bottom right, #06B6D422, transparent 40%), linear-gradient(135deg, #F8FAFF, #EEF4FF, #F5F3FF);
+}
+
+.auth-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(99, 102, 241, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, .05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+
+/* ==========================
+      CARD
+========================== */
+
+.auth-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 440px;
+    padding: 45px;
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(28px);
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(99, 102, 241, .12), 0 10px 25px rgba(0, 0, 0, .05);
+    transition: .35s;
+}
+
+.auth-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 70px rgba(99, 102, 241, .18), 0 15px 35px rgba(0, 0, 0, .08);
+}
+
+.auth-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 4px;
+    border-radius: 30px;
+    background: linear-gradient( 90deg, #6D5DF6, #4F8CFF, #00C2FF, #6D5DF6);
+}
+
+
+/* ==========================
+      BRAND
+========================== */
+
+.auth-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.auth-logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient( 135deg, #6D5DF6, #4F8CFF, #00C2FF);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, .35);
+}
+
+.auth-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+
+/* ==========================
+      TABS
+========================== */
+
+.auth-tabs {
+    display: flex;
+    padding: 5px;
+    background: #EEF2FF;
+    border-radius: 15px;
+    margin: 30px 0;
+    gap: 5px;
+}
+
+.auth-tab {
+    flex: 1;
+    border: none;
+    padding: 13px;
+    background: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .3s;
+    color: #64748B;
+}
+
+.auth-tab:hover {
+    background: white;
+    color: #4F46E5;
+}
+
+.auth-tab.active {
+    background: linear-gradient( 135deg, #6D5DF6, #4F8CFF);
+    color: white;
+    box-shadow: 0 10px 25px rgba(79, 140, 255, .30);
+}
+
+
+/* ==========================
+      FORM
+========================== */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.form-group input {
+    padding: 15px 18px;
+    border-radius: 14px;
+    border: 2px solid #E2E8F0;
+    background: white;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.form-group input:hover {
+    border-color: #A5B4FC;
+}
+
+.form-group input:focus {
+    border-color: #6D5DF6;
+    box-shadow: 0 0 0 5px rgba(109, 93, 246, .15);
+    transform: translateY(-2px);
+}
+
+.form-group input::placeholder {
+    color: #94A3B8;
+}
+
+
+/* ==========================
+      BUTTON
+========================== */
+
+.auth-btn {
+    margin-top: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient( 135deg, #6D5DF6, #4F8CFF, #00C2FF);
+    background-size: 250%;
+    transition: .4s;
+    box-shadow: 0 15px 35px rgba(79, 140, 255, .35);
+}
+
+.auth-btn:hover {
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(79, 140, 255, .45);
+}
+
+.auth-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ==========================
+      ERROR
+========================== */
+
+.auth-error {
+    padding: 14px;
+    border-radius: 14px;
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #DC2626;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* ==========================
+      WARNING
+========================== */
+
+.auth-warning-banner {
+    padding: 14px;
+    background: #FFF7ED;
+    border: 1px solid #FDBA74;
+    border-radius: 14px;
+    color: #EA580C;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* ==========================
+      TOGGLE
+========================== */
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 20px;
+    color: #64748B;
+}
+
+.auth-toggle button {
+    border: none;
+    background: none;
+    color: #6D5DF6;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-toggle button:hover {
+    color: #4338CA;
+    text-decoration: underline;
+}
+
+
+/* ==========================
+      DIVIDER
+========================== */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient( 90deg, transparent, #CBD5E1, transparent);
+}
+
+.auth-divider span {
+    padding: 0 15px;
+}
+
+
+/* ==========================
+      GOOGLE
+========================== */
+
+.google-auth-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.google-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ==========================
+      MOBILE
+========================== */
+
+@media(max-width:480px) {
+    .auth-card {
+        padding: 30px 20px;
+    }
+    .auth-title {
+        font-size: 24px;
+    }
+    .auth-logo {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+    }
+    .auth-btn {
+        padding: 14px;
+    }
+}
