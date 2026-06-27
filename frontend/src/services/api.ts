@@ -6,7 +6,7 @@ import axios from 'axios';
 const host = typeof window !== 'undefined' && window.location.hostname === '127.0.0.1' ? '127.0.0.1' : 'localhost';
 
 // Use production backend API URL if specified, otherwise fall back to localhost
-const apiBaseUrl = import.meta.env.VITE_API_URL || `https://intellmeet-giza.onrender.com/api`;
+const apiBaseUrl = import.meta.env.VITE_API_URL || `http://${host}:5000/api`;
 
 // Create a configured Axios HTTP client instance pointing to our backend API URL
 const API = axios.create({
